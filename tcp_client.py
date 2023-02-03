@@ -11,9 +11,12 @@ def main():
     # TODO: Create a socket and connect it to the server at the designated IP and port
     # TODO: Get user input and send it to the server using your TCP socket
     # TODO: Receive a response from the server and close the TCP connection
-    HOST = "127.0.0.1"  
+
+    # HOST = "127.0.0.1"  
+    HOST = "mihirsin.local"
     PORT = 10000  
 
+    # code adapted from the tutorial linked in the lab writeup
     print('enter a message:')
     message = input()
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
