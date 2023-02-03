@@ -11,8 +11,17 @@ def main():
     # TODO: Create a socket and connect it to the server at the designated IP and port
     # TODO: Get user input and send it to the server using your TCP socket
     # TODO: Receive a response from the server and close the TCP connection
-    pass
+    HOST = "127.0.0.1"  
+    PORT = 10000  
 
+    print('enter a message:')
+    message = input()
+    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+        s.connect((HOST, PORT))
+        s.sendall(bytes(message, 'utf-8'))
+        data = s.recv(1024)
+
+    print(data.decode())
 
 if __name__ == '__main__':
     main()
