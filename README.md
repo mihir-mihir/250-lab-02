@@ -4,6 +4,8 @@
 ## Team Members
 - Mihir Singh
 
+(implemented tcp_client.py)
+
 ## Lab Question Answers
 
 Question 1: 
